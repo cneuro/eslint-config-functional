@@ -51,7 +51,7 @@ Once installed, you may define scripts that will lint, fix and format your files
 
 In your `package.json`, add these under `scripts`:
 
-```sh
+```json
 "scripts": {
   ...
   "lint-code": "eslint --fix --ext .json,.ts,.tsx .",
