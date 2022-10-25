@@ -47,17 +47,15 @@ module.exports = {
 
 ## Usage
 
-Once installed, you may define scripts that will lint, fix and format your files.
+Once installed, you can run any `eslint`, `prettier` or `stylelint` command.
 
-In your `package.json`, add these under `scripts`:
+You may also define scripts that will lint, fix and format your files. To do so, in your `package.json`, add the following under `scripts`:
 
 ```json
 "scripts": {
-  ...
   "lint-code": "eslint --fix --ext .json,.ts,.tsx .",
   "lint-format": "prettier --write .",
   "lint-styles": "stylelint '**/*.css'",
-  ...
 }
 ```
 
