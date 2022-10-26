@@ -6,22 +6,10 @@ It is an exhaustive and opinionated configuration that cares about details like 
 
 ## Installation
 
-First, install this package:
+First, install this package alongside `eslint`:
 
 ```sh
-npm install -D @cneuro/eslint-config-alpha
-```
-
-Then you need to install its `peerDependencies`:
-
-```sh
-npx install-peerdeps --dev @cneuro/eslint-config-alpha
-```
-
-If that 's not available to you, you can simply add them like so:
-
-```sh
-npm install -D eslint eslint-import-resolver-typescript
+npm install -D @cneuro/eslint-config-alpha eslint
 ```
 
 Next, create the `.eslintrc.json` configuration file at the root of your project:
@@ -42,7 +30,7 @@ For example, in your `package.json`, add the following under `scripts`:
 
 ```json
 "scripts": {
-  "lint-code": "eslint --fix --ext .json,.ts,.tsx .",
+  "lint-code": "eslint --fix --ext .ts,.tsx .",
 }
 ```
 
