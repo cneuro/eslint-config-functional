@@ -1,65 +1,50 @@
 # eslint-config-alpha
 
-This is a shareable linting configuration library for React 18 with Typescript 4 and CSS3 utilizing [ESLint](https://eslint.org/), [Prettier](https://prettier.io/) and [Stylelint](https://stylelint.io/).
+This is a shareable linting configuration library for React 18 with Typescript 4 utilizing [ESLint](https://eslint.org/).
 
 It is an exhaustive and opinionated configuration that cares about details like alphabetic ordering.
 
 ## Installation
 
-First, install this package alongside its main dependencies:
+First, install this package:
 
 ```sh
-npm install -D @cneuro/eslint-config-alpha @rushstack/eslint-patch eslint prettier stylelint
+npm install -D @cneuro/eslint-config-alpha
 ```
 
-Note:
+Then you need to install its `peerDependencies`:
 
-> With the [`eslint-patch`](https://github.com/microsoft/rushstack/tree/main/eslint/eslint-patch) package, `peerDependencies` are automatically resolved in your project's local config file, so that the ESLint plugins don't all need to be installed manually.
-See [this issue](https://github.com/eslint/eslint/issues/3458) for more details.
-
-Next, create a series of configuration files at the root of your project.
-
-1. Add `.eslintrc.js`:
-
-```js
-require("@rushstack/eslint-patch/modern-module-resolution");
-
-module.exports = {
-  extends: "@cneuro/eslint-config-alpha",
-};
+```sh
+npx install-peerdeps --dev @cneuro/eslint-config-alpha
 ```
 
-2. Add `.prettierrc.js`:
+If that 's not available to you, you can simply add them like so:
 
-```js
-module.exports = {
-  ...require("@cneuro/eslint-config-alpha/.prettierrc.js")
-};
+```sh
+npm install -D eslint eslint-import-resolver-typescript
 ```
 
-3. Add `.stylelintrc.json`:
+Next, create the `.eslintrc.json` configuration file at the root of your project:
 
 ```json
 {
-  "extends": ["@cneuro/eslint-config-alpha/.stylelint.json"]
+  "extends": "@cneuro/eslint-config-alpha",
 }
 ```
 
 ## Usage
 
-Once installed, you can run any `eslint`, `prettier` or `stylelint` command.
+Once installed, you can run any `eslint` command.
 
-You may also define scripts that will lint, fix and format your files. To do so, in your `package.json`, add the following under `scripts`:
+You may also define scripts that will lint, fix and format your files to help automate your workflow.
+
+For example, in your `package.json`, add the following under `scripts`:
 
 ```json
 "scripts": {
   "lint-code": "eslint --fix --ext .json,.ts,.tsx .",
-  "lint-format": "prettier --write .",
-  "lint-styles": "stylelint '**/*.css'",
 }
 ```
-
-This will help automate the linting process across all your files, and you can add them to your workflows.
 
 ## IDE setup
 

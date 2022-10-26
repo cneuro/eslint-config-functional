@@ -1,22 +1,27 @@
-# dependencies
-/node_modules
+# Dependencies
+node_modules
 
-# production
-/dist
-
-# env vars
+# Deployment
 .env*
 !.env.example
-
-# linter
-.eslintcache
 
 # IDE
 .vscode
 *.code-workspace
 
-# Mac OS
+# Linter
+.eslintcache
+
+# Logging
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Miscellaneous
+notes.txt
+
+# MacOS
 .DS_Store
 
-# package managers
-npm-debug.log*
+# Production
+build
