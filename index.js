@@ -16,7 +16,7 @@ module.exports = {
     "plugin:import/typescript",
     "plugin:typescript-sort-keys/recommended",
   ],
-  ignorePatterns: ["build", "node_modules", "package-lock.json"],
+  ignorePatterns: ["build", "dist", "node_modules", "package-lock.json"],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
@@ -27,35 +27,37 @@ module.exports = {
     "@typescript-eslint",
     "import",
     "json",
+    "jsx-a11y",
     "react",
     "react-hooks",
     "sort-destructure-keys",
     "sort-keys-fix",
     "typescript-sort-keys",
+    "unicorn",
   ],
+  root: true,
   rules: {
+    curly: "error",
     "import/order": ["error", { alphabetize: { order: "asc", caseInsensitive: true } }],
     "no-console": ["warn", { allow: ["error", "warn"] }],
+    "no-duplicate-imports": "error",
+    "react/jsx-curly-brace-presence": "warn",
     "react/display-name": "off",
     "react/jsx-sort-props": ["error", { ignoreCase: true }],
     "react-hooks/exhaustive-deps": "error",
-    "sort-imports": [
-      "error",
-      {
-        ignoreDeclarationSort: true,
-      }
-    ],
-    "sort-destructure-keys/sort-destructure-keys": [2, { "caseSensitive": false }],
-    "sort-keys-fix/sort-keys-fix": ["error", "asc", { "caseSensitive": false }]
+    "sort-imports": ["error", { ignoreDeclarationSort: true }],
+    "sort-destructure-keys/sort-destructure-keys": ["error", { caseSensitive: false }],
+    "sort-keys-fix/sort-keys-fix": ["error", "asc", { caseSensitive: false }],
+    "unicorn/switch-case-braces": "error",
   },
   settings: {
     "import/resolver": {
       typescript: {
         alwaysTryTypes: true,
-      }
+      },
     },
     react: {
-      version: "detect"
+      version: "detect",
     },
   },
 };
