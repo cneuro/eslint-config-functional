@@ -2,7 +2,7 @@
 
 This is a shareable linting configuration library for projects based on React 18 with Typescript 4 utilizing [ESLint](https://eslint.org/).
 
-It is an exhaustive and opinionated configuration that cares about details like alphabetic ordering and strictly enforces best practices for syntax with the goal of having correct and consistent code.
+It is an exhaustive and opinionated configuration that cares about details like alphabetic ordering of keys and enums, enforcing consistent use of brackets and prohibiting default exports.
 
 ## Installation
 
