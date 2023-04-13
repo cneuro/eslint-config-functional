@@ -1,13 +1,13 @@
 {
-  "name": "@cneuro/eslint-config-alpha",
-  "version": "1.3.0",
+  "name": "@cneuro/eslint-config-functional",
+  "version": "1.4.1",
   "author": "Chris N",
-  "description": "Strict & opinionated ESLint config for React & Typescript projects.",
+  "description": "Strict & opinionated ESLint config for functional-oriented ES6 React & Typescript projects.",
   "main": "index.js",
   "license": "gpl-3.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/cneuro/eslint-config-alpha.git"
+    "url": "git+https://github.com/cneuro/eslint-config-functional.git"
   },
   "keywords": [
     "alphabetic",
@@ -16,31 +16,32 @@
     "config",
     "linter"
   ],
-  "homepage": "https://github.com/cneuro/eslint-config-alpha#README",
+  "homepage": "https://github.com/cneuro/eslint-config-functional#README",
   "bugs": {
-    "url": "https://github.com/cneuro/eslint-config-alpha/issues"
+    "url": "https://github.com/cneuro/eslint-config-functional/issues"
+  },
+  "engines": {
+    "node": ">=16",
+    "npm": ">=8"
+  },
+  "dependencies": {
+    "@typescript-eslint/eslint-plugin": "5.58.0",
+    "@typescript-eslint/parser": "5.58.0",
+    "eslint-import-resolver-typescript": "3.5.5",
+    "eslint-plugin-import": "2.27.5",
+    "eslint-plugin-json": "3.1.0",
+    "eslint-plugin-jsx-a11y": "6.7.1",
+    "eslint-plugin-prefer-arrow": "1.2.3",
+    "eslint-plugin-react": "7.32.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "eslint-plugin-sort-destructure-keys": "1.5.0",
+    "eslint-plugin-sort-keys-fix": "1.1.2",
+    "eslint-plugin-typescript-sort-keys": "2.3.0",
+    "eslint-plugin-unicorn": "46.0.0"
   },
   "peerDependencies": {
     "eslint": ">=8",
     "react": ">=18",
     "typescript": ">=4"
-  },
-  "dependencies": {
-    "@typescript-eslint/eslint-plugin": "5.49.0",
-    "@typescript-eslint/parser": "5.49.0",
-    "eslint-import-resolver-typescript": "3.5.3",
-    "eslint-plugin-import": "2.27.5",
-    "eslint-plugin-json": "3.1.0",
-    "eslint-plugin-jsx-a11y": "6.7.1",
-    "eslint-plugin-react": "7.32.1",
-    "eslint-plugin-react-hooks": "4.6.0",
-    "eslint-plugin-sort-destructure-keys": "1.4.0",
-    "eslint-plugin-sort-keys-fix": "1.1.2",
-    "eslint-plugin-typescript-sort-keys": "2.1.0",
-    "eslint-plugin-unicorn": "45.0.2"
-  },
-  "engines": {
-    "node": ">=16",
-    "npm": ">=8"
   }
 }

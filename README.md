@@ -1,22 +1,22 @@
-# eslint-config-alpha
+# eslint-config-functional
 
 This is a shareable linting configuration library for projects based on React 18 with Typescript 4 utilizing [ESLint](https://eslint.org/).
 
-It is an exhaustive and opinionated configuration that cares about details like alphabetic ordering of keys and enums, enforcing consistent use of brackets and prohibiting default exports.
+It is an exhaustive and opinionated configuration that enforces consistent use of ES6 & strict Typescript functional programming paradigms.
 
 ## Installation
 
 First, install this package alongside `eslint`:
 
 ```sh
-npm install -D @cneuro/eslint-config-alpha eslint
+npm install -D @cneuro/eslint-config-functional eslint
 ```
 
 Next, create the `.eslintrc.json` configuration file at the root of your project:
 
 ```json
 {
-  "extends": "@cneuro/eslint-config-alpha",
+  "extends": "@cneuro/eslint-config-functional",
 }
 ```
 

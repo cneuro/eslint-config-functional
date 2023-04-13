@@ -8,6 +8,7 @@ module.exports = {
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
+    "plugin:@typescript-eslint/strict",
     "plugin:json/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
@@ -28,6 +29,7 @@ module.exports = {
     "import",
     "json",
     "jsx-a11y",
+    "prefer-arrow",
     "react",
     "react-hooks",
     "sort-destructure-keys",
@@ -37,18 +39,65 @@ module.exports = {
   ],
   root: true,
   rules: {
+    "@typescript-eslint/consistent-type-definitions": [
+      "error",
+      "interface"
+    ],
     curly: "error",
-    "import/order": ["error", { alphabetize: { order: "asc", caseInsensitive: true } }],
+    "func-style": [
+      "error",
+      "declaration"
+    ],
+    "import/order": [
+      "error",
+      { alphabetize: {
+        order: "asc",
+        caseInsensitive: true
+      }}
+    ],
     "import/no-cycle": "error",
     "import/no-default-export": "error",
-    "no-console": ["warn", { allow: ["error", "warn"] }],
+    "no-console": [
+      "warn",
+      { allow: [
+        "error",
+        "warn"
+      ]}
+    ],
     "no-duplicate-imports": "error",
-    "react/jsx-curly-brace-presence": "warn",
-    "react/jsx-sort-props": ["error", { ignoreCase: true }],
+    "no-var": "error",
+    "prefer-arrow/prefer-arrow-functions": [
+      "error",
+      {
+        allowStandaloneDeclarations: true,
+        classPropertiesAllowed: false,
+        disallowPrototype: true,
+        singleReturnOnly: true,
+      }
+    ],
+    "prefer-arrow-callback": [
+      "error", 
+      { allowUnboundThis: false }
+    ],
+    "react/jsx-curly-brace-presence": "error",
+    "react/jsx-sort-props": [
+      "error",
+      { ignoreCase: true }
+    ],
     "react-hooks/exhaustive-deps": "error",
-    "sort-imports": ["error", { ignoreDeclarationSort: true }],
-    "sort-destructure-keys/sort-destructure-keys": ["error", { caseSensitive: false }],
-    "sort-keys-fix/sort-keys-fix": ["error", "asc", { caseSensitive: false }],
+    "sort-imports": [
+      "error",
+      { ignoreDeclarationSort: true }
+    ],
+    "sort-destructure-keys/sort-destructure-keys": [
+      "error",
+      { caseSensitive: false }
+    ],
+    "sort-keys-fix/sort-keys-fix": [
+      "error",
+      "asc",
+      { caseSensitive: false }
+    ],
     "unicorn/switch-case-braces": "error",
   },
   settings: {
