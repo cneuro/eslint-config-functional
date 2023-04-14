@@ -39,32 +39,36 @@ module.exports = {
   ],
   root: true,
   rules: {
-    "@typescript-eslint/consistent-type-definitions": [
-      "error",
-      "interface"
-    ],
+    "@typescript-eslint/consistent-type-exports": "error",
+    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    "@typescript-eslint/consistent-type-imports": "error",
+    "@typescript-eslint/no-import-type-side-effects": "error",
     curly: "error",
-    "func-style": [
-      "error",
-      "declaration"
-    ],
     "import/order": [
       "error",
-      { alphabetize: {
-        order: "asc",
-        caseInsensitive: true
-      }}
+      {
+        alphabetize: {
+          order: "asc",
+          caseInsensitive: true,
+        },
+      },
     ],
     "import/no-cycle": "error",
     "import/no-default-export": "error",
-    "no-console": [
-      "warn",
-      { allow: [
-        "error",
-        "warn"
-      ]}
-    ],
+    "no-alert": "error",
+    "no-console": ["warn", { allow: ["error", "warn"] }],
     "no-duplicate-imports": "error",
+    "no-restricted-syntax": [
+      "error",
+      {
+        selector: "ClassExpression",
+        message: "Use functional expression instead.",
+      },
+      {
+        selector: "ClassDeclaration",
+        message: "Use functional declaration instead.",
+      },
+    ],
     "no-var": "error",
     "prefer-arrow/prefer-arrow-functions": [
       "error",
@@ -73,31 +77,18 @@ module.exports = {
         classPropertiesAllowed: false,
         disallowPrototype: true,
         singleReturnOnly: true,
-      }
+      },
     ],
-    "prefer-arrow-callback": [
-      "error", 
-      { allowUnboundThis: false }
-    ],
+    "prefer-arrow-callback": ["error", { allowUnboundThis: false }],
     "react/jsx-curly-brace-presence": "error",
-    "react/jsx-sort-props": [
-      "error",
-      { ignoreCase: true }
-    ],
+    "react/jsx-sort-props": ["error", { ignoreCase: true }],
     "react-hooks/exhaustive-deps": "error",
-    "sort-imports": [
-      "error",
-      { ignoreDeclarationSort: true }
-    ],
+    "sort-imports": ["error", { ignoreDeclarationSort: true }],
     "sort-destructure-keys/sort-destructure-keys": [
       "error",
-      { caseSensitive: false }
+      { caseSensitive: false },
     ],
-    "sort-keys-fix/sort-keys-fix": [
-      "error",
-      "asc",
-      { caseSensitive: false }
-    ],
+    "sort-keys-fix/sort-keys-fix": ["error", "asc", { caseSensitive: false }],
     "unicorn/switch-case-braces": "error",
   },
   settings: {

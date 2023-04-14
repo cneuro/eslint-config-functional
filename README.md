@@ -4,6 +4,8 @@ This is a shareable linting configuration library for projects based on React 18
 
 It is an exhaustive and opinionated configuration that enforces consistent use of ES6 & strict Typescript functional programming paradigms.
 
+> Using this linter actively disallows the use of `class`.
+
 ## Installation
 
 First, install this package alongside `eslint`:

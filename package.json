@@ -1,8 +1,8 @@
 {
   "name": "@cneuro/eslint-config-functional",
-  "version": "1.4.1",
+  "version": "1.5.0",
   "author": "Chris N",
-  "description": "Strict & opinionated ESLint config for functional-oriented ES6 React & Typescript projects.",
+  "description": "Strict & opinionated ESLint config for FP-oriented ES6 React & Typescript projects.",
   "main": "index.js",
   "license": "gpl-3.0",
   "repository": {
