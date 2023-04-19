@@ -1,10 +1,18 @@
 # eslint-config-functional
 
-This is a shareable linting configuration library for projects based on React 18 with Typescript 4 utilizing [ESLint](https://eslint.org/).
+An [ESLint](https://eslint.org/) configuration library for projects based on React 18+ with Typescript 4+.
 
-It is an exhaustive and opinionated configuration that enforces consistent use of ES6 & strict Typescript functional programming paradigms.
+## Disclaimer
 
-> Using this linter actively disallows the use of `class`.
+This is an exhaustive and **opinionated** ESLint config that enforces consistent usage of ES6 & [strict](https://typescript-eslint.io/linting/configs/#strict) Typescript [functional programming](https://en.wikipedia.org/wiki/Functional_programming) paradigms. It encourages adherence to best practices and restricts certain language features that are prone to anti-patterns.
+
+Notable linting rules include:
+
+- `class` declarations are disallowed
+- `interface` declarations are disallowed
+- Only `enum` non-literal declarations are allowed
+- Only `const` variable declarations are allowed
+- Object keys and component props are sorted alphabetically
 
 ## Installation
 
