@@ -9,9 +9,6 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:@typescript-eslint/strict",
-    "plugin:functional/external-typescript-recommended",
-    "plugin:functional/strict",
-    "plugin:functional/stylistic",
     "plugin:json/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
@@ -29,7 +26,6 @@ module.exports = {
   },
   plugins: [
     "@typescript-eslint",
-    "functional",
     "import",
     "json",
     "jsx-a11y",

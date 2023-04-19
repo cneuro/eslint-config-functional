@@ -4,14 +4,13 @@ An [ESLint](https://eslint.org/) configuration library for projects based on Rea
 
 ## Disclaimer
 
-This is an exhaustive and **opinionated** ESLint config that enforces consistent usage of ES6 & [strict](https://typescript-eslint.io/linting/configs/#strict) Typescript [functional programming](https://en.wikipedia.org/wiki/Functional_programming) paradigms. It encourages adherence to best practices and restricts certain language features that are prone to anti-patterns.
+This is an exhaustive and **opinionated** ESLint config that enforces consistent usage of ES6 & [strict](https://typescript-eslint.io/linting/configs/#strict) Typescript non-OOP paradigms. It encourages adherence to best practices and restricts certain language features that are prone to anti-patterns.
 
 Notable linting rules include:
 
 - `class` declarations are disallowed
 - `interface` declarations are disallowed
 - Only `enum` non-literal declarations are allowed
-- Only `const` variable declarations are allowed
 - Object keys and component props are sorted alphabetically
 
 ## Installation
