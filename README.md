@@ -1,6 +1,6 @@
 # eslint-config-functional
 
-An [ESLint](https://eslint.org/) configuration library for projects based on React 18+ with Typescript 4+.
+An [ESLint](https://eslint.org/) configuration library for projects based on React 18+ with Typescript 5+.
 
 ## Disclaimer
 
@@ -9,6 +9,7 @@ This is an exhaustive and **opinionated** ESLint config that enforces consistent
 Notable linting rules include:
 
 - `class` declarations are disallowed
+- `default` exports are disallowed
 - `interface` declarations are disallowed
 - Only `enum` non-literal declarations are allowed
 - Object keys and component props are sorted alphabetically
