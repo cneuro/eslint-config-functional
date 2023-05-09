@@ -92,6 +92,11 @@ module.exports = {
       { caseSensitive: false },
     ],
     "sort-keys-fix/sort-keys-fix": ["error", "asc", { caseSensitive: false }],
+    "typescript-sort-keys/interface": [
+      "error",
+      "asc",
+      { caseSensitive: false, natural: true }
+    ],
     "unicorn/switch-case-braces": "error",
   },
   settings: {
