@@ -43,6 +43,12 @@ module.exports = {
     "@typescript-eslint/consistent-type-definitions": ["error", "type"],
     "@typescript-eslint/consistent-type-imports": "error",
     "@typescript-eslint/no-import-type-side-effects": "error",
+    "@typescript-eslint/strict-boolean-expressions": [
+      "error", {
+        allowNullableObject: false,
+        allowNullableBoolean: true,
+      }
+    ],
     curly: "error",
     "import/order": [
       "error",
@@ -58,6 +64,7 @@ module.exports = {
     "no-alert": "error",
     "no-console": ["warn", { allow: ["error", "warn"] }],
     "no-duplicate-imports": "error",
+    "no-implicit-coercion": "error",
     "no-restricted-syntax": [
       "error",
       {
