@@ -44,10 +44,11 @@ module.exports = {
     "@typescript-eslint/consistent-type-imports": "error",
     "@typescript-eslint/no-import-type-side-effects": "error",
     "@typescript-eslint/strict-boolean-expressions": [
-      "error", {
+      "error",
+      {
         allowNullableObject: false,
         allowNullableBoolean: true,
-      }
+      },
     ],
     curly: "error",
     "import/order": [
@@ -59,6 +60,7 @@ module.exports = {
         },
       },
     ],
+    eqeqeq: "error",
     "import/no-cycle": "error",
     "import/no-default-export": "error",
     "no-alert": "error",
@@ -102,7 +104,7 @@ module.exports = {
     "typescript-sort-keys/interface": [
       "error",
       "asc",
-      { caseSensitive: false, natural: true }
+      { caseSensitive: false, natural: true },
     ],
     "unicorn/switch-case-braces": "error",
   },
