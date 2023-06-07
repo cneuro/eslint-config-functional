@@ -11,7 +11,7 @@ Notable linting rules include:
 - `class` declarations are disallowed
 - `default` exports are disallowed
 - `interface` declarations are disallowed
-- Only `enum` non-literal declarations are allowed
+- `enum` declarations are disallowed
 - Object keys and component props are sorted alphabetically
 
 ## Installation
