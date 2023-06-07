@@ -79,8 +79,8 @@ module.exports = {
         message: "Use functional declaration instead.",
       },
       {
-        selector: "TSEnumDeclaration > TSEnumMember > Literal",
-        message: "Use a string union type instead.",
+        selector: "TSEnumDeclaration",
+        message: "Use string union type instead.",
       },
     ],
     "prefer-arrow/prefer-arrow-functions": [
