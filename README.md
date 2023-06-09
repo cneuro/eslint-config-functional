@@ -8,11 +8,11 @@ This is an exhaustive and **opinionated** ESLint config that enforces consistent
 
 Notable linting rules include:
 
-- `class` declarations are disallowed
-- `default` exports are disallowed
-- `interface` declarations are disallowed
-- `enum` declarations are disallowed
-- Object keys and component props are sorted alphabetically
+- `class` declarations are disallowed (encouraging the use of pure functions)
+- `default` exports are disallowed (named exports keep imports consistent)
+- `interface` declarations are disallowed (avoids [declaration merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces) - use `type` instead)
+- `enum` declarations are disallowed (use string [unions](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types) instead)
+- Object keys, union types, imports and component props are sorted alphabetically
 
 ## Installation
 
