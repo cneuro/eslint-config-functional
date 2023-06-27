@@ -45,7 +45,7 @@ module.exports = {
     "@typescript-eslint/no-duplicate-type-constituents": "error",
     "@typescript-eslint/no-redundant-type-constituents": "error",
     "@typescript-eslint/no-import-type-side-effects": "error",
-    "@typescript-eslint/no-unused-vars": ["error", { "varsIgnorePattern": "^_" }],
+    "@typescript-eslint/no-unused-vars": ["error", { varsIgnorePattern: "^_" }],
     "@typescript-eslint/sort-type-constituents": "error",
     "@typescript-eslint/strict-boolean-expressions": [
       "error",
@@ -104,7 +104,12 @@ module.exports = {
       "error",
       { caseSensitive: false },
     ],
-    "sort-keys-fix/sort-keys-fix": ["error", "asc", { caseSensitive: false }],
+
+    "sort-keys-fix/sort-keys-fix": [
+      "error",
+      "asc",
+      { caseSensitive: false, natural: true },
+    ],
     "typescript-sort-keys/interface": [
       "error",
       "asc",
