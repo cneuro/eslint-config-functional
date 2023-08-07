@@ -1,6 +1,6 @@
 {
   "name": "@cneuro/eslint-config-functional",
-  "version": "1.11.0",
+  "version": "1.12.0",
   "author": "Chris N",
   "description": "Strict & opinionated ESLint config for FP-oriented ES6 React & Typescript projects.",
   "main": "index.js",
