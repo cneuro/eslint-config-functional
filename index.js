@@ -15,7 +15,6 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "plugin:import/recommended",
     "plugin:import/typescript",
-    "plugin:typescript-sort-keys/recommended",
   ],
   ignorePatterns: ["build", "dist", "node_modules", "package-lock.json"],
   parser: "@typescript-eslint/parser",
@@ -34,7 +33,6 @@ module.exports = {
     "react-hooks",
     "sort-destructure-keys",
     "sort-keys-fix",
-    "typescript-sort-keys",
     "unicorn",
   ],
   root: true,
@@ -45,7 +43,7 @@ module.exports = {
     "@typescript-eslint/no-duplicate-type-constituents": "error",
     "@typescript-eslint/no-redundant-type-constituents": "error",
     "@typescript-eslint/no-import-type-side-effects": "error",
-    "@typescript-eslint/no-unused-vars": ["error", { varsIgnorePattern: "^_" }],
+    "@typescript-eslint/no-unused-vars": ["error", { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }],
     "@typescript-eslint/sort-type-constituents": "error",
     "@typescript-eslint/strict-boolean-expressions": [
       "error",
@@ -106,11 +104,6 @@ module.exports = {
     ],
 
     "sort-keys-fix/sort-keys-fix": [
-      "error",
-      "asc",
-      { caseSensitive: false, natural: true },
-    ],
-    "typescript-sort-keys/interface": [
       "error",
       "asc",
       { caseSensitive: false, natural: true },
