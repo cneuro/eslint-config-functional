@@ -9,14 +9,19 @@ module.exports = {
     "plugin:@typescript-eslint/recommended",
     "plugin:@typescript-eslint/recommended-requiring-type-checking",
     "plugin:@typescript-eslint/strict",
+    "plugin:import/recommended",
+    "plugin:import/typescript",
     "plugin:json/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
-    "plugin:import/recommended",
-    "plugin:import/typescript",
   ],
-  ignorePatterns: ["build", "dist", "node_modules", "package-lock.json"],
+  ignorePatterns: [
+    "build",
+    "dist",
+    "node_modules",
+    "package-lock.json",
+  ],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
@@ -38,20 +43,29 @@ module.exports = {
   root: true,
   rules: {
     "@typescript-eslint/consistent-type-exports": "error",
-    "@typescript-eslint/consistent-type-definitions": ["error", "type"],
+    "@typescript-eslint/consistent-type-definitions": [
+      "error",
+      "type",
+    ],
     "@typescript-eslint/consistent-type-imports": "error",
     "@typescript-eslint/member-ordering": [
       "error",
       {
-        "default": { "memberTypes": "never", "order": "natural-case-insensitive" }
-      }
+        default: {
+          memberTypes: "never",
+          order: "natural-case-insensitive",
+        },
+      },
     ],
     "@typescript-eslint/no-duplicate-type-constituents": "error",
     "@typescript-eslint/no-redundant-type-constituents": "error",
     "@typescript-eslint/no-import-type-side-effects": "error",
     "@typescript-eslint/no-unused-vars": [
       "error",
-      { argsIgnorePattern: "^_", varsIgnorePattern: "^_" }
+      {
+        argsIgnorePattern: "^_",
+        varsIgnorePattern: "^_",
+      },
     ],
     "@typescript-eslint/sort-type-constituents": "error",
     "@typescript-eslint/strict-boolean-expressions": [
@@ -75,22 +89,27 @@ module.exports = {
     "import/no-cycle": "error",
     "import/no-default-export": "error",
     "no-alert": "error",
-    "no-console": ["warn", { allow: ["error", "warn"] }],
+    "no-console": [
+      "warn",
+      {
+        allow: ["error", "warn"],
+      },
+    ],
     "no-duplicate-imports": "error",
     "no-implicit-coercion": "error",
     "no-restricted-syntax": [
       "error",
       {
-        selector: "ClassExpression",
         message: "Use functional expression instead.",
+        selector: "ClassExpression",
       },
       {
-        selector: "ClassDeclaration",
         message: "Use functional declaration instead.",
+        selector: "ClassDeclaration",
       },
       {
-        selector: "TSEnumDeclaration",
         message: "Use string union type instead.",
+        selector: "TSEnumDeclaration",
       },
     ],
     "prefer-arrow/prefer-arrow-functions": [
@@ -102,20 +121,40 @@ module.exports = {
         singleReturnOnly: true,
       },
     ],
-    "prefer-arrow-callback": ["error", { allowUnboundThis: false }],
+    "prefer-arrow-callback": [
+      "error",
+      {
+        allowUnboundThis: false,
+      },
+    ],
     "react/jsx-curly-brace-presence": "error",
-    "react/jsx-sort-props": ["error", { ignoreCase: true }],
+    "react/jsx-sort-props": [
+      "error",
+      {
+        ignoreCase: true,
+      },
+    ],
     "react-hooks/exhaustive-deps": "error",
-    "sort-imports": ["error", { ignoreDeclarationSort: true }],
+    "sort-imports": [
+      "error",
+      {
+        ignoreDeclarationSort: true,
+      },
+    ],
     "sort-destructure-keys/sort-destructure-keys": [
       "error",
-      { caseSensitive: false },
+      {
+        caseSensitive: false,
+      },
     ],
 
     "sort-keys-fix/sort-keys-fix": [
       "error",
       "asc",
-      { caseSensitive: false, natural: true },
+      {
+        caseSensitive: false,
+        natural: true,
+      },
     ],
     "unicorn/switch-case-braces": "error",
   },
