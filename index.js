@@ -75,6 +75,7 @@ module.exports = {
         allowNullableBoolean: true,
       },
     ],
+    "@typescript-eslint/switch-exhaustiveness-check": "error",
     curly: "error",
     "import/order": [
       "error",
@@ -112,6 +113,8 @@ module.exports = {
         selector: "TSEnumDeclaration",
       },
     ],
+    "no-unused-expressions": ["error", { "enforceForJSX": true }],
+    "object-shorthand": "error",
     "prefer-arrow/prefer-arrow-functions": [
       "error",
       {
@@ -127,6 +130,7 @@ module.exports = {
         allowUnboundThis: false,
       },
     ],
+    quotes: ["error", "double", { "allowTemplateLiterals": false }],
     "react/jsx-curly-brace-presence": "error",
     "react/jsx-sort-props": [
       "error",
@@ -147,7 +151,6 @@ module.exports = {
         caseSensitive: false,
       },
     ],
-
     "sort-keys-fix/sort-keys-fix": [
       "error",
       "asc",
