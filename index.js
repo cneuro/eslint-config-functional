@@ -139,6 +139,7 @@ module.exports = {
       },
     ],
     "react-hooks/exhaustive-deps": "error",
+    "react/self-closing-comp": "error",
     "sort-imports": [
       "error",
       {

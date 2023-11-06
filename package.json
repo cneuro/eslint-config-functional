@@ -1,13 +1,13 @@
 {
-  "name": "@kitstigator/eslint-config-functional",
-  "version": "1.13.1",
-  "author": "Chris N",
+  "name": "@kitnato/eslint-config-succinct",
+  "version": "1.14.0",
+  "author": "CN",
   "description": "Strict & opinionated ESLint config for FP-oriented ES6 React & Typescript projects.",
   "main": "index.js",
   "license": "gpl-3.0",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/kitstigator/eslint-config-functional.git"
+    "url": "git+https://github.com/kitnato/eslint-config-functional.git"
   },
   "keywords": [
     "alphabetic",
@@ -17,9 +17,9 @@
     "functional",
     "linter"
   ],
-  "homepage": "https://github.com/kitstigator/eslint-config-functional#README",
+  "homepage": "https://github.com/kitnato/eslint-config-functional#README",
   "bugs": {
-    "url": "https://github.com/kitstigator/eslint-config-functional/issues"
+    "url": "https://github.com/kitnato/eslint-config-functional/issues"
   },
   "engines": {
     "node": ">=16",

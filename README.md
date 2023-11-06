@@ -19,14 +19,14 @@ Notable linting rules include:
 First, install this package alongside `eslint`:
 
 ```sh
-npm install -D @kitstigator/eslint-config-functional eslint
+npm install -D @kitnato/eslint-config-functional eslint
 ```
 
 Next, create the `.eslintrc.json` configuration file at the root of your project:
 
 ```json
 {
-  "extends": "@kitstigator/eslint-config-functional",
+  "extends": "@kitnato/eslint-config-functional",
 }
 ```
 
