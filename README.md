@@ -1,32 +1,42 @@
-# eslint-config-functional
+# eslint-config-succinct
 
 An [ESLint](https://eslint.org/) configuration library for projects based on React 18+ with Typescript 5+.
 
 ## Disclaimer
 
-This is an exhaustive and **opinionated** ESLint config that enforces consistent usage of ES6 & [strict](https://typescript-eslint.io/linting/configs/#strict) Typescript non-OOP paradigms. It encourages adherence to best practices and restricts certain language features that are prone to anti-patterns.
+This is an exhaustive and **opinionated** ESLint config that enforces consistent usage of ES6 & [strict](https://typescript-eslint.io/linting/configs/#strict) TypeScript non-OOP paradigms. It encourages adherence to best practices and restricts certain language features that are prone to anti-patterns.
 
-Notable linting rules include:
+> NB: This config also extends the [Unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn) `recommended` config which supplies a wide host of syntax and pattern restrictions.
+
+## Particularities
+
+The following `unicorn/recommended` rules are amended:
+
+- `unicorn/filename-case` - most React apps will use PascalCase for component files and kebab-case or snakeCase for others. snake_case should be eschewed in favour of kebab-case.
+- `unicorn/no-array-callback-reference` - this conflicts with type-guards when applying `Array.filter()`, since spelling out the function parameters loses the assertion for subsequent functional chaining.
+- `unicorn/no-nested-ternary` - this conflicts with prettier's autoformat when using redundant parentheses.
+
+Notable additional linting rules include:
 
 - `class` declarations are disallowed (encouraging the use of pure functions)
 - `default` exports are disallowed (named exports keep imports consistent)
 - `interface` declarations are disallowed (avoids [declaration merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces) - use `type` instead)
 - `enum` declarations are disallowed (use string [unions](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types) instead)
-- Object keys, union types, imports and component props are sorted alphabetically
+- Object keys, union types, imports and component props are sorted in case-insensitive alphabetical order
 
 ## Installation
 
 First, install this package alongside `eslint`:
 
 ```sh
-npm install -D @kitnato/eslint-config-functional eslint
+npm install -D @kitnato/eslint-config-succinct eslint
 ```
 
 Next, create the `.eslintrc.json` configuration file at the root of your project:
 
 ```json
 {
-  "extends": "@kitnato/eslint-config-functional",
+  "extends": "@kitnato/eslint-config-succinct",
 }
 ```
 

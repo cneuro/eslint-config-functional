@@ -15,6 +15,7 @@ module.exports = {
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended",
+    "plugin:unicorn/recommended",
   ],
   ignorePatterns: [
     "build",
@@ -160,7 +161,18 @@ module.exports = {
         natural: true,
       },
     ],
-    "unicorn/switch-case-braces": "error",
+    "unicorn/filename-case": [
+      "error",
+      {
+        "cases": {
+          "camelCase": true,
+          "kebabCase": true,
+          "pascalCase": true,
+        }
+      }
+    ],
+    "unicorn/no-array-callback-reference": "off",
+    "unicorn/no-nested-ternary": "off",
   },
   settings: {
     "import/resolver": {
