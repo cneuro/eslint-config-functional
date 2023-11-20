@@ -6,9 +6,8 @@ module.exports = {
   },
   extends: [
     "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
-    "plugin:@typescript-eslint/recommended-requiring-type-checking",
-    "plugin:@typescript-eslint/strict",
+    "plugin:@typescript-eslint/strict-type-checked",
+    "plugin:@typescript-eslint/stylistic-type-checked",
     "plugin:import/recommended",
     "plugin:import/typescript",
     "plugin:json/recommended",
@@ -26,8 +25,9 @@ module.exports = {
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
-    project: "./tsconfig.json",
+    project: true,
     sourceType: "module",
+    tsconfigRootDir: "./",
   },
   plugins: [
     "@typescript-eslint",
@@ -58,8 +58,6 @@ module.exports = {
         },
       },
     ],
-    "@typescript-eslint/no-duplicate-type-constituents": "error",
-    "@typescript-eslint/no-redundant-type-constituents": "error",
     "@typescript-eslint/no-import-type-side-effects": "error",
     "@typescript-eslint/no-unused-vars": [
       "error",
@@ -68,6 +66,12 @@ module.exports = {
         varsIgnorePattern: "^_",
       },
     ],
+    "@typescript-eslint/restrict-template-expressions": ["error", {
+      allowAny: false,
+      allowBoolean: false,
+      allowNullish: false,
+      allowRegExp: false,
+    }],
     "@typescript-eslint/sort-type-constituents": "error",
     "@typescript-eslint/strict-boolean-expressions": [
       "error",

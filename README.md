@@ -18,11 +18,12 @@ The following `unicorn/recommended` rules are amended:
 
 Notable additional linting rules include:
 
-- `class` declarations are disallowed (encouraging the use of pure functions)
-- `default` exports are disallowed (named exports keep imports consistent)
-- `interface` declarations are disallowed (avoids [declaration merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces) - use `type` instead)
-- `enum` declarations are disallowed (use string [unions](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types) instead)
-- Object keys, union types, imports and component props are sorted in case-insensitive alphabetical order
+- `class` declarations are disallowed (encouraging the use of pure functions).
+- `default` exports are disallowed (named exports keep imports consistent).
+- `interface` declarations are disallowed (avoids [declaration merging](https://www.typescriptlang.org/docs/handbook/declaration-merging.html#merging-interfaces) - use `type` instead).
+- `enum` declarations are disallowed (use string [unions](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types) instead).
+- Object keys, union types, imports and component props are sorted in case-insensitive alphabetical order.
+- Unused variables in object spreads or function arguments can be denoted by prefixing with a "_".
 
 ## Installation
 

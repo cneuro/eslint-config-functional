@@ -1,6 +1,6 @@
 {
   "name": "@kitnato/eslint-config-succinct",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "author": "kitnato",
   "description": "Strict, exhaustive & opinionated ESLint config for FP-oriented ES6 React & Typescript projects.",
   "main": "index.js",
