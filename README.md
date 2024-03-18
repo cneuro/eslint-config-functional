@@ -6,7 +6,7 @@ An [ESLint](https://eslint.org/) configuration library for projects based on Rea
 
 This is an **opinionated** ESLint configuration that enforces stylistic rules and consistent usage of ES6 & [strict](https://typescript-eslint.io/linting/configs/#strict) TypeScript non-OOP paradigms. It encourages adherence to some FP best practices and restricts certain language features that are prone to anti-patterns.
 
-> NB: Do not use with [Prettier](https://prettier.io/), since this includes [@stylistic/eslint-plugin](https://eslint.style/) which supersedes its rules. If you are using Prettier for another purpose, e.g. for [stylelint](https://stylelint.io/), you can deactivate it for all code by adding a `.prettierrc` file containing only `{}`.
+> NB: Do not use with [Prettier](https://prettier.io/), since this includes [@stylistic/eslint-plugin](https://eslint.style/) which supersedes its rules.
 
 ## Particularities
 
