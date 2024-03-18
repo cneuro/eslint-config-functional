@@ -13,8 +13,7 @@ module.exports = {
     "plugin:json/recommended",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
-    "plugin:react-hooks/recommended",
-    "plugin:unicorn/recommended",
+    "plugin:react-hooks/recommended"
   ],
   ignorePatterns: [
     "build",
@@ -31,6 +30,7 @@ module.exports = {
   },
   plugins: [
     "@typescript-eslint",
+    "@stylistic",
     "import",
     "json",
     "jsx-a11y",
@@ -39,10 +39,10 @@ module.exports = {
     "react-hooks",
     "sort-destructure-keys",
     "sort-keys-fix",
-    "unicorn",
   ],
   root: true,
   rules: {
+    "@stylistic/semi": ["error", "never"],
     "@typescript-eslint/consistent-type-exports": "error",
     "@typescript-eslint/consistent-type-definitions": [
       "error",
@@ -135,7 +135,7 @@ module.exports = {
         allowUnboundThis: false,
       },
     ],
-    quotes: ["error", "double", { "allowTemplateLiterals": false }],
+    quotes: ["error", "backtick"],
     "react/jsx-curly-brace-presence": "error",
     "react/jsx-sort-props": [
       "error",
@@ -165,18 +165,6 @@ module.exports = {
         natural: true,
       },
     ],
-    "unicorn/filename-case": [
-      "error",
-      {
-        "cases": {
-          "camelCase": true,
-          "kebabCase": true,
-          "pascalCase": true,
-        }
-      }
-    ],
-    "unicorn/no-array-callback-reference": "off",
-    "unicorn/no-nested-ternary": "off",
   },
   settings: {
     "import/resolver": {

@@ -4,19 +4,13 @@ An [ESLint](https://eslint.org/) configuration library for projects based on Rea
 
 ## Disclaimer
 
-This is an exhaustive and **opinionated** ESLint config that enforces consistent usage of ES6 & [strict](https://typescript-eslint.io/linting/configs/#strict) TypeScript non-OOP paradigms. It encourages adherence to best practices and restricts certain language features that are prone to anti-patterns.
+This is an **opinionated** ESLint configuration that enforces stylistic rules and consistent usage of ES6 & [strict](https://typescript-eslint.io/linting/configs/#strict) TypeScript non-OOP paradigms. It encourages adherence to some FP best practices and restricts certain language features that are prone to anti-patterns.
 
-> NB: This config also extends the [Unicorn](https://github.com/sindresorhus/eslint-plugin-unicorn) `recommended` config which supplies a wide host of syntax and pattern restrictions.
+> NB: Do not use with [Prettier](https://prettier.io/), since this includes [@stylistic/eslint-plugin](https://eslint.style/) which supersedes its rules.
 
 ## Particularities
 
-The following `unicorn/recommended` rules are amended:
-
-- `unicorn/filename-case` - most React apps will use PascalCase for component files and kebab-case or snakeCase for others. snake_case should be eschewed in favour of kebab-case.
-- `unicorn/no-array-callback-reference` - this conflicts with type-guards when applying `Array.filter()`, since spelling out the function parameters loses the assertion for subsequent functional chaining.
-- `unicorn/no-nested-ternary` - this conflicts with prettier's autoformat when using redundant parentheses.
-
-Notable additional linting rules include:
+Notable linting rules include:
 
 - `class` declarations are disallowed (encouraging the use of pure functions).
 - `default` exports are disallowed (named exports keep imports consistent).
@@ -24,6 +18,7 @@ Notable additional linting rules include:
 - `enum` declarations are disallowed (use string [unions](https://www.typescriptlang.org/docs/handbook/2/everyday-types.html#union-types) instead).
 - Object keys, union types, imports and component props are sorted in case-insensitive alphabetical order.
 - Unused variables in object spreads or function arguments can be denoted by prefixing with a "_".
+- Semicolons are not used, instead relying on [ASI](https://262.ecma-international.org/7.0/#sec-rules-of-automatic-semicolon-insertion).
 
 ## Installation
 
@@ -41,7 +36,7 @@ Next, create the `.eslintrc.json` configuration file at the root of your project
 }
 ```
 
-Remember to [set](https://eslint.org/docs/latest/user-guide/configuring/ignoring-code) here any `ignorePatterns` if you require them beyond the standard `build` and `dist` folders, along with any other config overrides.
+Remember to [set](https://eslint.org/docs/latest/user-guide/configuring/ignoring-code) here any `ignorePatterns` if you require them beyond the standard `build` and `dist` folders, along with any other config overrides you may desire.
 
 ## Usage
 
@@ -61,12 +56,14 @@ For example, in your `package.json`, add the following under `scripts`:
 
 ### VS Code
 
-If you use Microsoft VS Code, you can add the following snippet at the top of your `.vscode/settings.json` to automatically run `eslint` and fix all issues whenever a file is saved.
+If you use Microsoft VS Code, you can add the following snippet at the top of your `.vscode/settings.json` to automatically run the linter and fix all issues whenever a file is saved.
 
 ```json
+"editor.formatOnSave": true,
 "editor.codeActionsOnSave": {
   "source.fixAll.eslint": true
 }
+"eslint.format.enable": true,
 ```
 
 ## License
