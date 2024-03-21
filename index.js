@@ -10,7 +10,7 @@ module.exports = {
     "plugin:@typescript-eslint/stylistic-type-checked",
     "plugin:import/recommended",
     "plugin:import/typescript",
-    "plugin:json/recommended",
+    "plugin:jsx-a11y/strict",
     "plugin:react/recommended",
     "plugin:react/jsx-runtime",
     "plugin:react-hooks/recommended"
@@ -21,6 +21,11 @@ module.exports = {
     "node_modules",
     "package-lock.json",
   ],
+  overrides: [{
+    files: ["*.json"],
+    parser: "eslint-plugin-json-es",
+    extends: "plugin:eslint-plugin-json-es/recommended",
+  }],
   parser: "@typescript-eslint/parser",
   parserOptions: {
     ecmaVersion: "latest",
@@ -29,10 +34,9 @@ module.exports = {
     tsconfigRootDir: "./",
   },
   plugins: [
-    "@typescript-eslint",
     "@stylistic",
+    "@typescript-eslint",
     "import",
-    "json",
     "jsx-a11y",
     "prefer-arrow",
     "react",
@@ -42,6 +46,15 @@ module.exports = {
   ],
   root: true,
   rules: {
+    "@stylistic/array-element-newline": ["error", "consistent"],
+    "@stylistic/comma-dangle": ["error", "always-multiline"],
+    "@stylistic/function-call-argument-newline": ["error", "consistent"],
+    "@stylistic/jsx/jsx-sort-props": [
+      "error",
+      {
+        ignoreCase: true,
+      },
+    ],
     "@stylistic/semi": ["error", "never"],
     "@typescript-eslint/consistent-type-exports": "error",
     "@typescript-eslint/consistent-type-definitions": [
@@ -135,26 +148,17 @@ module.exports = {
         allowUnboundThis: false,
       },
     ],
-    quotes: ["error", "backtick"],
-    "react/jsx-curly-brace-presence": "error",
-    "react/jsx-sort-props": [
-      "error",
-      {
-        ignoreCase: true,
-      },
-    ],
     "react-hooks/exhaustive-deps": "error",
-    "react/self-closing-comp": "error",
-    "sort-imports": [
-      "error",
-      {
-        ignoreDeclarationSort: true,
-      },
-    ],
     "sort-destructure-keys/sort-destructure-keys": [
       "error",
       {
         caseSensitive: false,
+      },
+    ],
+    "sort-imports": [
+      "error",
+      {
+        ignoreDeclarationSort: true,
       },
     ],
     "sort-keys-fix/sort-keys-fix": [

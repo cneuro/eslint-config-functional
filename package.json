@@ -1,6 +1,6 @@
 {
   "name": "@kitnato/eslint-config-succinct",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "author": "kitnato",
   "description": "Strict, exhaustive & opinionated ESLint config for FP-oriented ES6 React & Typescript projects.",
   "main": "index.js",
@@ -15,7 +15,10 @@
     "eslint",
     "eslintconfig",
     "functional",
-    "linter"
+    "json",
+    "linter",
+    "react",
+    "typescript"
   ],
   "homepage": "https://github.com/kitnato/eslint-config-functional#README",
   "bugs": {
@@ -31,7 +34,7 @@
     "@typescript-eslint/parser": "7.2.0",
     "eslint-import-resolver-typescript": "3.6.1",
     "eslint-plugin-import": "2.29.1",
-    "eslint-plugin-json": "3.1.0",
+    "eslint-plugin-json-es": "1.5.7",
     "eslint-plugin-jsx-a11y": "6.8.0",
     "eslint-plugin-prefer-arrow": "1.2.3",
     "eslint-plugin-react": "7.34.1",
@@ -42,6 +45,6 @@
   "peerDependencies": {
     "eslint": ">=8",
     "react": ">=18",
-    "typescript": ">=4"
+    "typescript": ">=5"
   }
 }

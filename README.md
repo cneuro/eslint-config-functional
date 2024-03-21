@@ -1,12 +1,12 @@
 # eslint-config-succinct
 
-An [ESLint](https://eslint.org/) configuration library for projects based on React 18+ with Typescript 5+.
+An [ESLint](https://eslint.org/) configuration library for projects based on React 18+ with Typescript 5+. It also lints JSON files via [eslint-plugin-json-es](https://github.com/zeitport/eslint-plugin-json-es).
 
-## Disclaimer
+## Purpose
 
-This is an **opinionated** ESLint configuration that enforces stylistic rules and consistent usage of ES6 & [strict](https://typescript-eslint.io/linting/configs/#strict) TypeScript non-OOP paradigms. It encourages adherence to some FP best practices and restricts certain language features that are prone to anti-patterns.
+This is an **opinionated** ESLint configuration that enforces consistent usage of ES6 & [strict](https://typescript-eslint.io/linting/configs/#strict) TypeScript non-OOP paradigms, as well as stylistic rules. It encourages adherence to some FP best practices and restricts certain language features that are prone to anti-patterns.
 
-> NB: Do not use with [Prettier](https://prettier.io/), since this includes [@stylistic/eslint-plugin](https://eslint.style/) which supersedes its rules.
+> NB: Not be used alongside [Prettier](https://prettier.io/), since this config includes [@stylistic/eslint-plugin](https://eslint.style/) which supersedes its rules.
 
 ## Particularities
 
@@ -48,7 +48,7 @@ For example, in your `package.json`, add the following under `scripts`:
 
 ```json
 "scripts": {
-  "lint-code": "eslint --fix --ext .ts,.tsx .",
+  "lint-code": "eslint --fix --ext .json,.ts,.tsx .",
 }
 ```
 
