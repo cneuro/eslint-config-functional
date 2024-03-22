@@ -1,10 +1,10 @@
 # eslint-config-succinct
 
-An [ESLint](https://eslint.org/) configuration library for projects based on React 18+ with Typescript 5+. It also lints JSON files via [eslint-plugin-json-es](https://github.com/zeitport/eslint-plugin-json-es).
+An [ESLint](https://eslint.org/) configuration library for projects based on React 18+ with Typescript 5+.
 
 ## Purpose
 
-This is an **opinionated** ESLint configuration that enforces consistent usage of ES6 & [strict](https://typescript-eslint.io/linting/configs/#strict) TypeScript non-OOP paradigms, as well as stylistic rules. It encourages adherence to some FP best practices and restricts certain language features that are prone to anti-patterns.
+This is an **opinionated** ESLint configuration that enforces consistent usage of ES6 & [strict](https://typescript-eslint.io/linting/configs/#strict) TypeScript non-OOP paradigms, as well as stylistic rules. It encourages adherence to functional-programming & accessibility best practices and restricts certain language features that are prone to anti-patterns.
 
 > NB: Not be used alongside [Prettier](https://prettier.io/), since this config includes [@stylistic/eslint-plugin](https://eslint.style/) which supersedes its rules.
 
@@ -19,6 +19,7 @@ Notable linting rules include:
 - Object keys, union types, imports and component props are sorted in case-insensitive alphabetical order.
 - Unused variables in object spreads or function arguments can be denoted by prefixing with a "_".
 - Semicolons are not used, instead relying on [ASI](https://262.ecma-international.org/7.0/#sec-rules-of-automatic-semicolon-insertion).
+- Enforces use of tab characters instead of spaces for indentation. This [article](https://www.alpharithms.com/tabs-vs-spaces-the-timeless-debate-581511) lays out the debate, with pros and cons.
 
 ## Installation
 
@@ -48,7 +49,7 @@ For example, in your `package.json`, add the following under `scripts`:
 
 ```json
 "scripts": {
-  "lint-code": "eslint --fix --ext .json,.ts,.tsx .",
+  "lint-code": "eslint --fix --ext .ts,.tsx .",
 }
 ```
 
