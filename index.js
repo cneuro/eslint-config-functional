@@ -42,20 +42,58 @@ module.exports = {
 	],
 	root: true,
 	rules: {
-		"@stylistic/array-element-newline": ["error", "consistent"],
-		"@stylistic/function-call-argument-newline": ["error", "consistent"],
-		"@stylistic/indent": ["error", "tab"],
-		"@stylistic/indent-binary-ops": ["error", "tab"],
-		"@stylistic/jsx-indent": [2, "tab", { checkAttributes: true, indentLogicalExpressions: true }],
-		"@stylistic/jsx-indent-props": [2, "tab"],
+		"@stylistic/array-element-newline": [
+			"error",
+			"consistent"
+		],
+		"@stylistic/function-call-argument-newline": [
+			"error",
+			"consistent"
+		],
+		"@stylistic/indent": [
+			"error",
+			"tab"
+		],
+		"@stylistic/indent-binary-ops": [
+			"error",
+			"tab"
+		],
+		"@stylistic/jsx-indent": [
+			2,
+			"tab",
+			{
+				checkAttributes: true,
+				indentLogicalExpressions: true
+			}
+		],
+		"@stylistic/jsx-indent-props": [
+			2,
+			"tab"
+		],
 		"@stylistic/jsx-sort-props": [
 			"error",
 			{
 				ignoreCase: true,
 			},
 		],
-		"@stylistic/no-tabs": ["error", { allowIndentationTabs: true }],
-		"@stylistic/quotes": ["error", "double"],
+		"@stylistic/no-extra-parens": [
+			"error",
+			"all",
+			{
+				ignoreJSX: "multi-line",
+				nestedBinaryExpressions: false
+			}
+		],
+		"@stylistic/no-tabs": [
+			"error",
+			{
+				allowIndentationTabs: true
+			}
+		],
+		"@stylistic/quotes": [
+			"error",
+			"double"
+		],
 		"@typescript-eslint/consistent-type-exports": "error",
 		"@typescript-eslint/consistent-type-definitions": [
 			"error",
@@ -79,12 +117,15 @@ module.exports = {
 				varsIgnorePattern: "^_",
 			},
 		],
-		"@typescript-eslint/restrict-template-expressions": ["error", {
-			allowAny: false,
-			allowBoolean: false,
-			allowNullish: false,
-			allowRegExp: false,
-		}],
+		"@typescript-eslint/restrict-template-expressions": [
+			"error",
+			{
+				allowAny: false,
+				allowBoolean: false,
+				allowNullish: false,
+				allowRegExp: false,
+			}
+		],
 		"@typescript-eslint/sort-type-constituents": "error",
 		"@typescript-eslint/strict-boolean-expressions": [
 			"error",
@@ -102,7 +143,18 @@ module.exports = {
 					order: "asc",
 					caseInsensitive: true,
 				},
-			},
+				groups: [
+					"builtin",
+					"external",
+					"internal",
+					"parent",
+					"sibling",
+					"index",
+					"object",
+					"type"
+				],
+				"newlines-between": "always",
+			}
 		],
 		eqeqeq: "error",
 		"import/no-cycle": "error",
@@ -131,8 +183,16 @@ module.exports = {
 				selector: "TSEnumDeclaration",
 			},
 		],
-		"no-unused-expressions": ["error", { "enforceForJSX": true }],
-		"object-shorthand": "error",
+		"no-unused-expressions": [
+			"error",
+			{
+				"enforceForJSX": true
+			}
+		],
+		"object-shorthand": [
+			"error",
+			"always"
+		],
 		"prefer-arrow/prefer-arrow-functions": [
 			"error",
 			{
